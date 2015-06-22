@@ -8,3 +8,13 @@ D:\Projects\My\SalesForce4Win\SalesForce4Win\obj\Debug\SalesForce4Win.csproj.Gen
 D:\Projects\My\SalesForce4Win\SalesForce4Win\obj\Debug\SalesForce4Win.exe
 D:\Projects\My\SalesForce4Win\SalesForce4Win\obj\Debug\SalesForce4Win.pdb
 D:\Projects\My\SalesForce4Win\SalesForce4Win\obj\Debug\SalesForce4Win.LoginForm.resources
+D:\Projects\My\SalesForce4Win\SF4Win\SalesForce4Win\bin\Debug\SalesForce4Win.exe.config
+D:\Projects\My\SalesForce4Win\SF4Win\SalesForce4Win\obj\Debug\SalesForce4Win.exe
+D:\Projects\My\SalesForce4Win\SF4Win\SalesForce4Win\obj\Debug\SalesForce4Win.pdb
+D:\Projects\My\SalesForce4Win\SF4Win\SalesForce4Win\bin\Debug\SalesForce4Win.exe
+D:\Projects\My\SalesForce4Win\SF4Win\SalesForce4Win\bin\Debug\SalesForce4Win.pdb
+D:\Projects\My\SalesForce4Win\SF4Win\SalesForce4Win\obj\Debug\SalesForce4Win.csprojResolveAssemblyReference.cache
+D:\Projects\My\SalesForce4Win\SF4Win\SalesForce4Win\obj\Debug\SalesForce4Win.Form1.resources
+D:\Projects\My\SalesForce4Win\SF4Win\SalesForce4Win\obj\Debug\SalesForce4Win.LoginForm.resources
+D:\Projects\My\SalesForce4Win\SF4Win\SalesForce4Win\obj\Debug\SalesForce4Win.Properties.Resources.resources
+D:\Projects\My\SalesForce4Win\SF4Win\SalesForce4Win\obj\Debug\SalesForce4Win.csproj.GenerateResource.Cache

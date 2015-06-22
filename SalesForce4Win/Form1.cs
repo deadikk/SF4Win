@@ -152,12 +152,19 @@ namespace SalesForce4Win
                 string s = "";
                 for (int i = 0; i < obj.fields.Length; i++)
                 {
-                    s = obj.fields[i].type.Equals(fieldType.reference) ? obj.fields[i].referenceTo[0].ToString() : "";
-                    
-                    _List.Items.Add(new ListViewItem(new string[] { obj.fields[i].label.ToString(), obj.fields[i].name.ToString(), obj.fields[i].type.ToString(), s }));
-                }
-                
+                    try
+                    {
+                        s = obj.fields[i].type.Equals(fieldType.reference) ? obj.fields[i].referenceTo[0].ToString() : "";
 
+                        _List.Items.Add(new ListViewItem(new string[] { obj.fields[i].label.ToString(), obj.fields[i].name.ToString(), obj.fields[i].type.ToString(), s }));
+                    }
+
+                    catch(Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+
+                }
             }
 
             else if (Tree.SelectedNode.Level == 2)
@@ -259,7 +266,7 @@ namespace SalesForce4Win
 
             if ((columnIndex == 0 && hitTest.Item.SubItems[columnIndex].Text != string.Empty && _List.Columns[0].Text == "Objects") || (columnIndex == 3 && hitTest.Item.SubItems[columnIndex].Text != string.Empty))
             {            
-                findNodeByName(hitTest.Item.SubItems[columnIndex].Text);                
+                findNodeByName(hitTest.Item.SubItems[columnIndex].Text.Split(' ')[0]);                
             }
             
             
