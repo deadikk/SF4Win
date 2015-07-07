@@ -5,5 +5,8 @@
     <Setting Name="SalesForce4Win_SFWeb_SforceService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://login.salesforce.com/services/Soap/u/34.0</Value>
     </Setting>
+    <Setting Name="SalesForce4Win_adressValid_FirstLogicAddressClean" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://TEW-INTTST1.global.avidww.com:5055/ws/services:FirstLogicAddressClean</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

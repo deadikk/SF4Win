@@ -40,10 +40,11 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.Tree = new System.Windows.Forms.TreeView();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.mainTable = new System.Windows.Forms.DataGridView();
             this._List = new System.Windows.Forms.ListView();
             this.describeSObjectResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sObjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mainTable = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -53,9 +54,9 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mainTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.describeSObjectResultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sObjectBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainTable)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -137,6 +138,7 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.button1);
             this.splitContainer2.Panel1.Controls.Add(this.mainTable);
             // 
             // splitContainer2.Panel2
@@ -145,6 +147,19 @@
             this.splitContainer2.Size = new System.Drawing.Size(915, 678);
             this.splitContainer2.SplitterDistance = 201;
             this.splitContainer2.TabIndex = 2;
+            // 
+            // mainTable
+            // 
+            this.mainTable.AllowUserToAddRows = false;
+            this.mainTable.AllowUserToDeleteRows = false;
+            this.mainTable.AllowUserToOrderColumns = true;
+            this.mainTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mainTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTable.Location = new System.Drawing.Point(0, 0);
+            this.mainTable.Name = "mainTable";
+            this.mainTable.ReadOnly = true;
+            this.mainTable.Size = new System.Drawing.Size(915, 201);
+            this.mainTable.TabIndex = 3;
             // 
             // _List
             // 
@@ -171,18 +186,15 @@
             // 
             this.sObjectBindingSource.DataSource = typeof(SalesForce4Win.SFWeb.sObject);
             // 
-            // mainTable
+            // button1
             // 
-            this.mainTable.AllowUserToAddRows = false;
-            this.mainTable.AllowUserToDeleteRows = false;
-            this.mainTable.AllowUserToOrderColumns = true;
-            this.mainTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.mainTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainTable.Location = new System.Drawing.Point(0, 0);
-            this.mainTable.Name = "mainTable";
-            this.mainTable.ReadOnly = true;
-            this.mainTable.Size = new System.Drawing.Size(915, 201);
-            this.mainTable.TabIndex = 3;
+            this.button1.Location = new System.Drawing.Point(18, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -206,9 +218,9 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mainTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.describeSObjectResultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sObjectBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,6 +239,7 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.ListView _List;
         private System.Windows.Forms.DataGridView mainTable;
+        private System.Windows.Forms.Button button1;
     }
 }
 

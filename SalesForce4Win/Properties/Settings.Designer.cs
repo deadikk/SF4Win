@@ -32,5 +32,15 @@ namespace SalesForce4Win.Properties {
                 return ((string)(this["SalesForce4Win_SFWeb_SforceService"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://TEW-INTTST1.global.avidww.com:5055/ws/services:FirstLogicAddressClean")]
+        public string SalesForce4Win_adressValid_FirstLogicAddressClean {
+            get {
+                return ((string)(this["SalesForce4Win_adressValid_FirstLogicAddressClean"]));
+            }
+        }
     }
 }

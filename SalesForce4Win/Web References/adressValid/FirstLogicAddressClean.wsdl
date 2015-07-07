@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:HDR1="http://tewk-edq/webservices/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://TEW-INTDEV.global.avidww.com/services/FirstLogicAddressClean" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" name="FirstLogicAddressClean" targetNamespace="http://TEW-INTDEV.global.avidww.com/services/FirstLogicAddressClean" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:dx="http://tewk-edq/webservices/" targetNamespace="http://tewk-edq/webservices/">
+      <xsd:element name="address1" type="xsd:string" />
+      <xsd:element name="address2" type="xsd:string" />
+      <xsd:element name="address3" type="xsd:string" />
+      <xsd:element name="city" type="xsd:string" />
+      <xsd:element name="state" type="xsd:string" />
+      <xsd:element name="postcode" type="xsd:string" />
+      <xsd:element name="country" type="xsd:string" />
+      <xsd:element name="AddressCleanseResult" type="xsd:string" />
+    </xsd:schema>
+    <xsd:schema xmlns:dx="http://tewk-edq/webservices/" targetNamespace="http://TEW-INTDEV.global.avidww.com/services/FirstLogicAddressClean">
+      <xsd:import namespace="http://tewk-edq/webservices/" />
+      <xsd:complexType name="AddressClean">
+        <xsd:sequence>
+          <xsd:element name="AddressCleanRequest" nillable="true" type="tns:AddressIn" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AddressIn">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" ref="dx:address1" />
+          <xsd:element minOccurs="0" ref="dx:address2" />
+          <xsd:element minOccurs="0" ref="dx:address3" />
+          <xsd:element minOccurs="0" ref="dx:city" />
+          <xsd:element minOccurs="0" ref="dx:state" />
+          <xsd:element minOccurs="0" ref="dx:postcode" />
+          <xsd:element minOccurs="0" ref="dx:country" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AddressCleanResponse">
+        <xsd:sequence>
+          <xsd:element name="AddressCleanResponse" nillable="true" type="tns:AddressOut" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AddressOut">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" ref="dx:AddressCleanseResult" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AddressClean" type="tns:AddressClean" />
+      <xsd:element name="AddressCleanResponse" type="tns:AddressCleanResponse" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="FirstLogicAddressClean_PortType_AddressCleanResponse">
+    <wsdl:part name="parameters" element="tns:AddressCleanResponse" />
+  </wsdl:message>
+  <wsdl:message name="FirstLogicAddressClean_PortType_AddressClean">
+    <wsdl:part name="parameters" element="tns:AddressClean" />
+  </wsdl:message>
+  <wsdl:portType name="FirstLogicAddressClean_PortType">
+    <wsdl:operation name="AddressClean">
+      <wsdl:input message="tns:FirstLogicAddressClean_PortType_AddressClean" />
+      <wsdl:output message="tns:FirstLogicAddressClean_PortType_AddressCleanResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="services_FirstLogicAddressClean_Binder" type="tns:FirstLogicAddressClean_PortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddressClean">
+      <soap:operation soapAction="services_FirstLogicAddressClean_Binder_AddressClean" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FirstLogicAddressClean">
+    <wsdl:port name="services_FirstLogicAddressClean_Port" binding="tns:services_FirstLogicAddressClean_Binder">
+      <soap:address location="https://TEW-INTTST1.global.avidww.com:5055/ws/services:FirstLogicAddressClean" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
